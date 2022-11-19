@@ -9,19 +9,25 @@ public class Main {
         }
     }
 
-    public static void installationSoftware(int clientOS, int clientDeviceYear) {
+    public static String definitionSystem(int clientOS) {
         String operatingSystem = "";
         switch (clientOS) {
-            case 0: operatingSystem = "iOS";
-            case 1: operatingSystem = "Android";
+            case 0:
+                operatingSystem = "iOS";
+            case 1:
+                operatingSystem = "Android";
         }
+        return operatingSystem;
+    }
+
+     public static void installationSoftware(int clientOS, int clientDeviceYear){
 
         int currentYear = LocalDate.now().getYear();
 
         if (clientDeviceYear <= currentYear) {
-            System.out.println("«Установите облегченную версию приложения для " + operatingSystem + " по ссылке»");
+            System.out.println("Установите облегченную версию приложения для " + definitionSystem(clientOS)+ " по ссылке");
         } else {
-            System.out.println("Ссылка на скачивание приложения для " + operatingSystem);
+            System.out.println("Ссылка на скачивание приложения для " + definitionSystem(clientOS));
         }
 
     }
@@ -59,10 +65,9 @@ public class Main {
         System.out.println("Задача 2");
         System.out.print("Выберите свою операционную систему, введя 0 или 1: ");
         int clientOS = 0;
-        int clientAndroid=1;
 
         System.out.print("Введите год производства вашего смартфона: ");
-        int clientDeviceYear = 2012;
+        int clientDeviceYear = 2019;
 
         installationSoftware(clientOS, clientDeviceYear);
         System.out.println();

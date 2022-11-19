@@ -57,7 +57,6 @@ public class Main {
 
         //Задача 2
         System.out.println("Задача 2");
-
         System.out.print("Выберите свою операционную систему, введя 0 или 1: ");
         int clientOS = 0;
         int clientAndroid=1;
@@ -67,11 +66,11 @@ public class Main {
 
         installationSoftware(clientOS, clientDeviceYear);
         System.out.println();
+
         //Задача 3
         System.out.println("Задача 3");
-
         System.out.print("Введите растояние(км) до вас: ");
-        int deliveryDistance = 76;
+        int deliveryDistance = 95;
 
         calculationDaysDelivery(deliveryDistance);
     }
